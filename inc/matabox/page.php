@@ -29,6 +29,14 @@ if( class_exists( 'CSF' ) ) {
             'title'     => __( 'Meal page section', 'meal'),
             'fields'    => array(
 
+
+              array(
+                'id'      => 'meal_section_name',
+                'type'    => 'text',
+                'title'   => __( 'Section Name', 'meal'),
+                'default' => 'Hello world.'
+              ),
+
               array(
                 'id'          => 'meal_section_select',
                 'type'        => 'select',
