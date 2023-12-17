@@ -12,6 +12,7 @@ if( class_exists( 'CSF' ) ) {
     CSF::createMetabox( $prefix, array(
       'title'     => 'Section mata box',
       'post_type' => 'section',
+      
     ) );
   
     //
@@ -24,7 +25,7 @@ if( class_exists( 'CSF' ) ) {
         // A Checkbooxes field
 
         array(
-            'id'         => 'select_section',
+            'id'         => 'meal_type',
             'type'       => 'Select',
             'title'      => __( 'Select Section ', "meal" ),
             'options'    => array(

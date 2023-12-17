@@ -4,6 +4,8 @@
 
 require_once get_theme_file_path("lib/csf/codestar-framework.php");
 require_once get_theme_file_path("inc/matabox/section.php");
+require_once get_theme_file_path("inc/matabox/section-banner.php");
+require_once get_theme_file_path("inc/matabox/best-food.php");
 require_once get_theme_file_path("inc/matabox/page.php");
 // Meal Theme Setup
 
@@ -35,11 +37,14 @@ function meal_enqueue_scripts(){
     wp_enqueue_style("meal_owl_carousel_css",get_theme_file_uri("/assets/css/owl.carousel.min.css"),null,"3.5.2");
     wp_enqueue_style("meal_magnific_popup_css",get_theme_file_uri("/assets/css/magnific-popup.css"),null,"3.5.2");
     wp_enqueue_style("meal_aos_css",get_theme_file_uri("/assets/css/aos.css"),null,"3.5.2");
+    wp_enqueue_style("meal_index_css",get_theme_file_uri("/assets/css/index.css"),null,"3.5.2");
     wp_enqueue_style("meal_bootstrap-datepicker_css",get_theme_file_uri("/assets/css/bootstrap-datepicker.css"),null,"2.0");
     wp_enqueue_style("meal_jquery.timepicker_css",get_theme_file_uri("/assets/css/jquery.timepicker.css"),null,"2.0");
     wp_enqueue_style("meal_jquery_ionicons_css",get_theme_file_uri("/assets/fonts/ionicons/css/ionicons.min.css"),null,"2.0");
+
     wp_enqueue_style("meal_font_awesome_css",get_theme_file_uri("/assets/fonts/fontawesome/css/font-awesome.min.css"),null,"2.0");
     wp_enqueue_style("meal_flatiocon_css",get_theme_file_uri("/assets/fonts/flaticon/font/flaticon.css"),null,"2.0");
+
     wp_enqueue_style("meal_style_css",get_theme_file_uri("/assets/css/style.css"),null,"2.0");
     wp_enqueue_style("meal_style",get_stylesheet_uri());
 
@@ -56,6 +61,9 @@ function meal_enqueue_scripts(){
     wp_enqueue_script("meal_stellar_js",get_theme_file_uri("/assets/js/jquery.stellar.min.js"),array('jquery'),"1.0",true);
     wp_enqueue_script("meal_easing_js",get_theme_file_uri("/assets/js/jquery.easing.1.3.js"),array('jquery'),"1.0",true);
     wp_enqueue_script("meal_aos_js",get_theme_file_uri("/assets/js/aos.js"),array('jquery'),"1.0",true);
+    wp_enqueue_script("meal_filterize_js",get_theme_file_uri("/assets/js/jquery.filterizr.min.js"),array('jquery'),"1.0",true);
+    // wp_enqueue_script("meal_filterize_min_js",get_theme_file_uri("/assets/js/filterizr.min.js"),array('jquery'),"1.0",true);
+    wp_enqueue_script("meal_filterize_cog_js",get_theme_file_uri("/assets/js/js-plugin-cng/filterize-cog.js"),array('jquery'),"1.0",true);
     wp_enqueue_script("meal_main_js",get_theme_file_uri("/assets/js/main.js"),array('jquery'),"1.0",true);
 
 
@@ -64,6 +72,18 @@ function meal_enqueue_scripts(){
 add_action("wp_enqueue_scripts","meal_enqueue_scripts");
 
 // Meal Theme enqueue scripts end;
+
+
+
+function food_cat_id($food_id){
+    $team = wp_get_post_terms($food_id,'category');
+    if ($team) {
+        $fist_term = array_shift($team);
+        return $fist_term->name;
+    }
+
+    return "Food";
+}
 
 
 
