@@ -6,7 +6,9 @@ require_once get_theme_file_path("lib/csf/codestar-framework.php");
 require_once get_theme_file_path("inc/matabox/section.php");
 require_once get_theme_file_path("inc/matabox/section-banner.php");
 require_once get_theme_file_path("inc/matabox/best-food.php");
+require_once get_theme_file_path("inc/matabox/gallary.php");
 require_once get_theme_file_path("inc/matabox/page.php");
+require_once get_theme_file_path("inc/matabox/chef.php");
 // Meal Theme Setup
 
 function meal_theme_setup(){
@@ -42,7 +44,8 @@ function meal_enqueue_scripts(){
     wp_enqueue_style("meal_jquery.timepicker_css",get_theme_file_uri("/assets/css/jquery.timepicker.css"),null,"2.0");
     wp_enqueue_style("meal_jquery_ionicons_css",get_theme_file_uri("/assets/fonts/ionicons/css/ionicons.min.css"),null,"2.0");
 
-    wp_enqueue_style("meal_font_awesome_css",get_theme_file_uri("/assets/fonts/fontawesome/css/font-awesome.min.css"),null,"2.0");
+    wp_enqueue_style("meal_font_awesome_css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
     wp_enqueue_style("meal_flatiocon_css",get_theme_file_uri("/assets/fonts/flaticon/font/flaticon.css"),null,"2.0");
 
     wp_enqueue_style("meal_style_css",get_theme_file_uri("/assets/css/style.css"),null,"2.0");

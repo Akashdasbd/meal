@@ -1142,3 +1142,8 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+
+body.bg-light.customize-support {
+  margin-top: 0;
+}

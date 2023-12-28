@@ -26,102 +26,22 @@
     get_template_part('sections-templet/best-food');
     ?>
 
+    <?php
+    $section_id = 269;
+    get_template_part('sections-templet/gallary');
+    ?>
 
-    <div class="section pb-3 bg-white" id="section-about" data-aos="fade-up">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-12 col-lg-8 section-heading">
-                    <h2 class="heading mb-5">The Restaurant</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section bg-white pt-2 pb-2 text-center" data-aos="fade">
-        <ul class="simplefilter">
 
-            <li class="filtr-controls active" data-filter="all">All</li>
-            <li class="filtr-controls" data-filter="1">Cityscape</li>
-            <li class="filtr-controls" data-filter="2">Landscape</li>
-            <li class="filtr-controls" data-filter="3">Industrial</li>
-            <li class="filtr-controls" data-filter="4">Daylight</li>
-            <li class="filtr-controls" data-filter="5">Nightscape</li>
-        </ul>
-    </div>
 
-    <div class="section bg-white pt-2 pb-2 text-center" data-aos="fade">
-        <div class="filter-container">
-            <div class="filtr-item" data-category="1" data-sort="value">
-                <img src="img/sample1.jpg" alt="sample" />
-                <h2>1</h2>
-            </div>
-            <div class="filtr-item" data-category="2, 1" data-sort="value">
-                <img src="img/sample2.jpg" alt="sample" />
-                <h2>2</h2>
-            </div>
-            <div class="filtr-item" data-category="1, 3" data-sort="value">
-                <img src="img/sample3.jpg" alt="sample" />
-                <h2>3</h2>
-            </div>
-        </div>
-    </div>
+<?php
+    $section_id = 282;
+    get_template_part('sections-templet/cef');
+?>
 
 
 
 
-    <div class="section bg-white" data-aos="fade-up">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-12 section-heading text-center">
-                    <h2 class="heading mb-5">Meet The Chefs</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 pr-md-5 text-center mb-5">
-                    <div class="ftco-38">
-                        <div class="ftco-38-img">
-                            <div class="ftco-38-header">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chef_1.jpg" alt="Image">
-                                <h3 class="ftco-38-heading">Daniel Graham</h3>
-                                <p class="ftco-38-subheading">Master Chef</p>
-                            </div>
-                            <div class="ftco-38-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. It is a paradisematic country.</p>
-                                <p>
-                                    <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
-                                    <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
-                                    <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 pl-md-5 text-center mb-5">
-                    <div class="ftco-38">
-                        <div class="ftco-38-img">
-                            <div class="ftco-38-header">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chef_2.jpg" alt="Image">
-                                <h3 class="ftco-38-heading">Nick Browning</h3>
-                                <p class="ftco-38-subheading">Master Chef</p>
-                            </div>
-                            <div class="ftco-38-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. It is a paradisematic country.</p>
-                                <p>
-                                    <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
-                                    <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
-                                    <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
     <div class="section bg-light" id="section-menu" data-aos="fade-up">
         <div class="container">
             <div class="row section-heading justify-content-center mb-5">

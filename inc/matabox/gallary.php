@@ -9,13 +9,11 @@ if( class_exists( 'CSF' ) ) {
       $section_id = empty($_REQUEST['post_ID']) ? $_REQUEST['post'] : $_REQUEST['post_ID'];
   
     }
-  
 
-    if ('section' != get_post_type($section_id)) {
+    if ('section' !=get_post_type($section_id)) {
       return $prefix ;
     }
-
-    
+  
    $section_mata = get_post_meta($section_id,'meal_section',true);
 
    if(isset($section_mata['meal_type'])){
@@ -26,54 +24,49 @@ if( class_exists( 'CSF' ) ) {
 
   
   
-   if ('best-food' != $section_type) {
+   if ('gallary' != $section_type) {
       return $prefix;
    }
     //
     // Set a unique slug-like ID
-    $prefix = 'meal_best_food_section';
+    $prefix = 'meal_gallary_section';
   
     //
     // Create a metabox
     CSF::createMetabox( $prefix, array(
-      'title'     => __( 'Meal Best food Section', 'meal'),
+      'title'     => __( 'Meal gallary Section', 'meal'),
       'post_type' => 'section',
     ) );
   
     //
     // Create a section
     CSF::createSection( $prefix, array(
-      'title'  => __('Meal Best food sectin','meal'),
+      'title'  => __('Meal gallary sectin','meal'),
       'fields' => array(
   
         //
         // A Checkbooxes field
 
         array(
-            'id'        => 'meal_best_food_section_select',
+            'id'        => 'meal_gallary_section_select',
             'type'      => 'group',
-            'title'     => __( 'Meal Best food section', 'meal'),
+            'title'     => __( 'Meal gallary section', 'meal'),
             'fields'    => array(
 
-
               array(
-                'id'      => 'meal_best_food_name',
+                'id'      => 'meal_gallary_cat',
                 'type'    => 'text',
-                'title'   => __( 'Best food mane', 'meal'),
-                'default' => 'Hello world.'
-              ),
-
-              array(
-                'id'          => 'meal_best_food_select',
-                'type'        => 'select',
-                'title'       => __( 'Select Best Food', 'meal'),
-                'options'     => 'post',
-                'query_args'  => array(
-                  'posts_per_page' => -1 ,
-                  'post_type' => 'recipe',
-                )
+                'title'   => __( 'Category Name', 'meal'),
                 
               ),
+
+              array(
+                'id'    => 'meal_gallary_media',
+                'type'  => 'media',
+                'title'   => __( 'gallary Image', 'meal'),
+              ),
+
+
             ),
           ),
           

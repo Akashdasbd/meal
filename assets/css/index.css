@@ -11,7 +11,7 @@ img {
 
 @media screen and (min-width: 767px) {
   .filtr-item {
-    width: 33.3%;
+    width: 25%;
   }
 }
 
@@ -142,4 +142,25 @@ select {
 .color-container-4 {
   display: none;
   transition: height 500ms ease-out;
+}
+
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filtr-item {
+  width: 24.5%; /* Set the width to 23% to allow for some spacing */
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.filtr-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

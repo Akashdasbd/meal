@@ -8,7 +8,7 @@ if( class_exists( 'CSF' ) ) {
     
     // Set a unique slug-like ID
     $prefix = 'meal_page_banner_section';
-
+    
 
     $section_id = 0;
     if (isset($_REQUEST['post']) || isset($_REQUEST['post_ID'])) {
@@ -16,6 +16,11 @@ if( class_exists( 'CSF' ) ) {
   
     }
   
+    if('section' != get_post_type($section_id)){
+
+      return $prefix ;
+    }
+
    $section_mata = get_post_meta($section_id,'meal_section',true);
 
    if(isset($section_mata['meal_type'])){
